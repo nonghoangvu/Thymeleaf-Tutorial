@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav th:fragment="navbar">
+    <a th:href="@{'/'}">[(#{menu.home})]</a>
+    <a th:href="@{'/about'}">[(#{menu.about})]</a>
+    <a href="?lang=vi">Vietnamese</a>
+    <a href="?lang=en">English</a>
+</nav>
+</body>
+</html>
+<!--<script>-->
+<!--    $(function () {-->
+<!--        $("a[href*=lang]").click(function () {-->
+<!--            $.ajax({-->
+<!--                url: "/home" + $(this).attr("href")-->
+<!--            }).then(resp => {-->
+<!--                location.reload();-->
+<!--            });-->
+<!--            return false;-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf layout</title>
+</head>
+<body th:with="x=100">
+    <h2 th:remove="all">Number y is <i id="y">220</i></h2>
+    <div th:replace="/layouts/frags::frag1"></div>
+    <div th:replace="/layouts/frags::frag2(${x}, ~{::#y/text()})"></div>
+</body>
+</html>

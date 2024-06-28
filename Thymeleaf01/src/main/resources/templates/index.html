@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+</head>
+<body>
+<h1>Scope and Parameters</h1>
+<h3>Model: [[${model}]]</h3>
+<h3>Session: [[${session.session_value}]]</h3>
+<h3>Context: [[${application.servlet_context_value}]]</h3>
+<h3>URI: [[#{request.requestURI}]]</h3>
+<h3>Param: [[${param.param}]]</h3>
+<a th:href="@{'/?param=NongHoangVu'}">Get param</a>
+<hr>
+<h1>Loop</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Number</th>
+        </tr>
+    </thead>
+    <tbody th:each="num:${numbers}">
+        <tr>
+            <td>[[${num}]]</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

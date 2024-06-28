@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="vi" th:fragment="dynamic(view)">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout01</title>
+</head>
+<body>
+    <h1>Logo not found!</h1>
+    <hr>
+    <nav th:insert="~{/layouts/_navbar::navbar}"></nav>
+    <main th:replace="${view}"></main>
+</body>
+</html>
